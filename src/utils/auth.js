@@ -1,4 +1,4 @@
-//import Cookies from 'js-cookie'
+import Cookies from 'js-cookie'
 
 const uToken = 'u_token'
 const darkMode = 'dark_mode';

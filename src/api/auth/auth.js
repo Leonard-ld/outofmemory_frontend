@@ -7,15 +7,15 @@ export function userRegister(RegisterDTO) {
     method: 'post',
     data: RegisterDTO
   })
-  
+
 }
 
 // 前台用户登录
-export function login(data) {
+export function login(LoginDTO) {
   return request({
     url: 'user/login',
     method: 'post',
-    data
+    data: LoginDTO
   })
 }
 // 登录后获取前台用户信息

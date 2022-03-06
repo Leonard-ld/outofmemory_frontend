@@ -52,12 +52,12 @@ export default {
       redirect: undefined,
       loading: false,
       ruleForm: {
-        name: "",
+        email: "",
         pass: "",
         rememberMe: true,
       },
       rules: {
-        name: [
+        email: [
           { required: true, message: '请输入邮箱地址', trigger: 'blur' },
           {
             type: 'email',
