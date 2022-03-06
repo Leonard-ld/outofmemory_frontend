@@ -3,13 +3,26 @@
   <div class="box">
       🔔 {{billboard.content}}
   </div>
+  <div class="columns">
+    <div class="column is-three-quarters">
+      <TopicList>
+
+      </TopicList>
+    </div>
+    <div class="column">
+      <CardBar></CardBar>
+    </div>
+  </div>
 </div>
 </template>
 
 <script>
+import CardBar from "@/views/card/CardBar"
+import TopicList from '@/views/post/Index'
 import {getBillboard} from "@/api/billboard"
 export default {
   name: 'HomeView',
+  components: {CardBar, TopicList},
   data(){
     return{
       billboard: {
