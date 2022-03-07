@@ -15,8 +15,8 @@
             label-width="100px"
             class="demo-ruleForm"
           >
-            <el-form-item label="邮箱" prop="email">
-              <el-input v-model="ruleForm.email"></el-input>
+            <el-form-item label="用户名" prop="name">
+              <el-input v-model="ruleForm.name"></el-input>
             </el-form-item>
 
             <el-form-item label="密码" prop="pass">
@@ -52,19 +52,28 @@ export default {
       redirect: undefined,
       loading: false,
       ruleForm: {
-        email: "",
+        name: "",
         pass: "",
         rememberMe: true,
       },
       rules: {
-        email: [
-          { required: true, message: '请输入邮箱地址', trigger: 'blur' },
+        name: [
+          { required: true, message: '请输入用户名', trigger: 'blur' },
           {
-            type: 'email',
-            message: '请输入正确的邮箱地址',
-            trigger: ['blur', 'change']
-          },
+            min: 2,
+            max: 10,
+            message: '长度在 2 到 10 个字符',
+            trigger: 'blur'
+          }
         ],
+        // email: [
+        //   { required: true, message: '请输入邮箱地址', trigger: 'blur' },
+        //   {
+        //     type: 'email',
+        //     message: '请输入正确的邮箱地址',
+        //     trigger: ['blur', 'change']
+        //   },
+        // ],
         pass: [
           { required: true, message: "请输入密码", trigger: "blur" },
           {
@@ -82,6 +91,7 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
           this.loading = true;
+          this.$store.dispatch("user/getInfo")
           this.$store
             .dispatch("user/login", this.ruleForm)
             .then(() => {
@@ -90,6 +100,8 @@ export default {
                 type: "success",
                 duration: 2000,
               });
+
+              
 
               setTimeout(() => {
                 this.loading = false;

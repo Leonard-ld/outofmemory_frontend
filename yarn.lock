@@ -2431,6 +2431,11 @@ csso@^4.2.0:
   dependencies:
     css-tree "^1.1.2"
 
+darkreader@^4.9.44:
+  version "4.9.44"
+  resolved "https://registry.npmmirror.com/darkreader/-/darkreader-4.9.44.tgz#6aa89fd95c569dd9d77259cd34ebd2c7282e0e60"
+  integrity sha512-Mrt5s5eMaFC24Tfi2nNsXpYIfzWK/RUzJxgk0Ysqokvk9lBCn/pkUTyQGYeQbU/U3aKZEYXXqsxZjNfiLoA6QQ==
+
 de-indent@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmmirror.com/de-indent/-/de-indent-1.0.2.tgz#b2038e846dc33baa5796128d0804b455b8c1e21d"
