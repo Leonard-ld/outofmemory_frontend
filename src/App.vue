@@ -1,5 +1,5 @@
-  <template>
-    <div>
+<template>
+  <div>
     <div class="mb-5">
       <Header></Header>
     </div>
@@ -7,21 +7,25 @@
     <div class="container context">
         <router-view :key="this.$route.fullPath"></router-view>
     </div>
+
+    <div>
+      <Footer></Footer>
     </div>
-  </template>
+  </div>
+</template>
 
+<script>
+import Header from "@/components/Layout/Header";
+import Footer from "@/components/Layout/Footer";
 
-  <script>
-    import Header from "@/components/Layout/Header.vue"
-    export default {
-    name: "App",
-    components: { Header },
-  };
-  </script>
+export default {
+  name: "App",
+  components: { Header, Footer },
+};
+</script>
 
-  <style scoped>
-  .container {
-    min-height: 500px;
-  }
-
-  </style>
+<style scoped>
+.container {
+  min-height: 500px;
+}
+</style>
