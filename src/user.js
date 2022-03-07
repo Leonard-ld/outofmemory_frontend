@@ -11,6 +11,7 @@ export function getInfoByName(username, page, size) {
     }
   })
 }
+
 // 用户主页
 export function getInfo() {
   return request({
@@ -18,6 +19,7 @@ export function getInfo() {
     method: 'get'
   })
 }
+
 // 更新
 export function update(user) {
   return request({
@@ -26,5 +28,3 @@ export function update(user) {
     data: user
   })
 }
-
-

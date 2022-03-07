@@ -8,6 +8,7 @@ export function getToken() {
     return Cookies.get(uToken);
 }
 
+
 // 设置Token，1天,与后端同步
 export function setToken(token) {
     return Cookies.set(uToken, token, {expires: 1})

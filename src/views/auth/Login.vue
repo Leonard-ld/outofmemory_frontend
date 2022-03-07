@@ -91,7 +91,6 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
           this.loading = true;
-          this.$store.dispatch("user/getInfo")
           this.$store
             .dispatch("user/login", this.ruleForm)
             .then(() => {

@@ -1,10 +1,27 @@
-<template>
-  <div class="container">
-    
-    <router-view/>
-  </div>
-</template>
+  <template>
+    <div>
+    <div class="mb-5">
+      <Header></Header>
+    </div>
 
-<style>
+    <div class="container context">
+        <router-view :key="this.$route.fullPath"></router-view>
+    </div>
+    </div>
+  </template>
 
-</style>
+
+  <script>
+    import Header from "@/components/Layout/Header.vue"
+    export default {
+    name: "App",
+    components: { Header },
+  };
+  </script>
+
+  <style scoped>
+  .container {
+    min-height: 500px;
+  }
+
+  </style>
