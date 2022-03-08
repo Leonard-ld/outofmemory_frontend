@@ -3,23 +3,23 @@ import request from '@/utils/request'
 // 列表
 export function getList(pageNo, size, tab) {
   return request(({
-    url: '/post/list',
+    url: '/post/show',
     method: 'get',
     params: { pageNo: pageNo, size: size, tab: tab }
   }))
 }
 
 // 发布
-export function post(topic) {
+export function post(post) {
   return request({
     url: '/post/create',
     method: 'post',
-    data: topic
+    data: post
   })
 }
 
 // 浏览
-export function getTopic(id) {
+export function getPosts(id) {
   return request({
     url: `/post`,
     method: 'get',
@@ -39,15 +39,15 @@ export function getRecommendTopics(id) {
   })
 }
 
-export function update(topic) {
+export function update(post) {
   return request({
     url: '/post/update',
     method: 'post',
-    data: topic
+    data: post
   })
 }
 
-export function deleteTopic(id) {
+export function deletePost(id) {
   return request({
     url: `/post/delete/${id}`,
     method: 'delete'
