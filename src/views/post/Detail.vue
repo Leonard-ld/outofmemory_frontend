@@ -62,6 +62,7 @@
         </nav>
       </el-card>
 
+    <Lv-comments :slug="post.id" /> 
     </div>
 
     <div class="column">
@@ -87,9 +88,10 @@ import Vditor from 'vditor'
 import 'vditor/dist/index.css'
 import Author from '@/views/post/Author'
 import Recommend from '@/views/post/Recommend'
+import LvComments from '@/components/Comment/Comments'
 export default {
   name: 'PostDetail',
-  components: { Author, Recommend },
+  components: { Author, Recommend, LvComments },
   computed: {
     ...mapGetters([
       'token','user'
