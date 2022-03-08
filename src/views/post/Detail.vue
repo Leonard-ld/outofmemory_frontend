@@ -65,7 +65,12 @@
     </div>
 
     <div class="column">
-      作者信息
+        作者信息
+        <!--作者-->
+      <Author
+        v-if="flag"
+        :user="postUser"
+      />
     </div>
   </div>
 </template>
@@ -75,8 +80,10 @@ import { deletePost, getPosts } from '@/api/post'
 import { mapGetters } from 'vuex'
 import Vditor from 'vditor'
 import 'vditor/dist/index.css'
+import Author from '@/views/post/Author'
 export default {
   name: 'PostDetail',
+  components: { Author },
   computed: {
     ...mapGetters([
       'token','user'
