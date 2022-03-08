@@ -3,23 +3,24 @@ import request from '@/utils/request'
 // 关注
 export function follow(id) {
   return request(({
-    url: `/relationship/subscribe/${id}`,
-    method: 'get'
+    url: `/relationship`,
+    method: 'post',
+    data: {"id":id}
   }))
 }
 
-// 关注
+//  取消关注
 export function unFollow(id) {
   return request(({
-    url: `/relationship/unsubscribe/${id}`,
-    method: 'get'
+    url: `/relationship/${id}`,
+    method: 'delete'
   }))
 }
 
 // 验证是否关注
-export function hasFollow(topicUserId) {
+export function hasFollow(userId) {
   return request(({
-    url: `/relationship/validate/${topicUserId}`,
+    url: `/relationship/${userId}`,
     method: 'get'
   }))
 }

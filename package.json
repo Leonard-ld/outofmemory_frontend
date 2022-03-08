@@ -11,6 +11,7 @@
     "buefy": "^0.9.19",
     "core-js": "^3.8.3",
     "darkreader": "^4.9.44",
+    "date-fns": "^2.28.0",
     "dayjs": "^1.10.8",
     "element-ui": "^2.15.6",
     "font-awesome": "4.7.0",

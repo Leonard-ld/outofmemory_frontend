@@ -3,16 +3,15 @@ import request from '@/utils/request'
 // 列表
 export function getList(pageNo, size, tab) {
   return request(({
-    url: '/post/show',
+    url: `/post/${pageNo}/${size}/${tab}`,
     method: 'get',
-    params: { pageNo: pageNo, size: size, tab: tab }
   }))
 }
 
 // 发布
 export function post(post) {
   return request({
-    url: '/post/create',
+    url: '/post',
     method: 'post',
     data: post
   })
@@ -21,20 +20,17 @@ export function post(post) {
 // 浏览
 export function getPosts(id) {
   return request({
-    url: `/post`,
+    url: `/post/${id}`,
     method: 'get',
-    params: {
-      id: id
-    }
   })
 }
 // 获取详情页推荐
-export function getRecommendTopics(id) {
+export function getRecommendPosts(id) {
   return request({
     url: '/post/recommend',
     method: 'get',
     params: {
-      topicId: id
+      postId: id
     }
   })
 }

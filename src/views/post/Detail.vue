@@ -71,6 +71,11 @@
         v-if="flag"
         :user="postUser"
       />
+      <!--推荐-->
+      <Recommend
+        v-if="flag"
+        :post-id="post.id"
+      />
     </div>
   </div>
 </template>
@@ -81,9 +86,10 @@ import { mapGetters } from 'vuex'
 import Vditor from 'vditor'
 import 'vditor/dist/index.css'
 import Author from '@/views/post/Author'
+import Recommend from '@/views/post/Recommend'
 export default {
   name: 'PostDetail',
-  components: { Author },
+  components: { Author, Recommend },
   computed: {
     ...mapGetters([
       'token','user'

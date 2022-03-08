@@ -83,7 +83,7 @@ export default {
         })
       }
       else{
-        this.$message.success('请先登录')
+        this.$message.info('请先登录')
       }
     },
     handleUnFollow: function(id) {

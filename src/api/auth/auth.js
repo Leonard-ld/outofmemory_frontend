@@ -7,7 +7,6 @@ export function userRegister(RegisterDTO) {
     method: 'post',
     data: RegisterDTO
   })
-
 }
 
 // 前台用户登录
