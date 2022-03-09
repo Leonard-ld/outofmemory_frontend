@@ -115,7 +115,7 @@ import { getList } from '@/api/post'
 import Pagination from '@/components/Pagination'
 
 export default {
-  name: 'TopicList',
+  name: 'PostList',
   components: { Pagination },
   data() {
     return {

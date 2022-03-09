@@ -3,12 +3,8 @@ import request from '@/utils/request'
 // 用户主页
 export function getInfoByName(username, page, size) {
   return request({
-    url: '/user/' + username,
+    url: `/user/${username}/${page}/${size}`,
     method: 'get',
-    params: {
-      pageNo: page,
-      size: size
-    }
   })
 }
 // 用户主页
@@ -21,10 +17,11 @@ export function getInfo() {
 // 更新
 export function update(user) {
   return request({
-    url: '/user/update',
-    method: 'post',
+    url: '/user',
+    method: 'put',
     data: user
   })
 }
+
 
 

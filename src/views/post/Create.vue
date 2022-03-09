@@ -14,6 +14,7 @@
         <div>
           <el-form
             ref="ruleForm"
+            v-loading="loading"
             :model="ruleForm"
             :rules="rules"
             class="demo-ruleForm"
@@ -62,6 +63,7 @@ export default {
 
   data() {
     return {
+      loading: false,
       contentEditor: {},
       ruleForm: {
         title: '', // 标题
@@ -112,6 +114,7 @@ export default {
     submitForm(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
+          this.loading = true
           if (
             this.contentEditor.getValue().length === 1 ||
             this.contentEditor.getValue() == null ||
@@ -128,6 +131,7 @@ export default {
           post(this.ruleForm).then((response) => {
             const { data } = response
             setTimeout(() => {
+              this.loading = false
               this.$router.push({
                 name: 'post-detail',
                 params: { id: data.id }

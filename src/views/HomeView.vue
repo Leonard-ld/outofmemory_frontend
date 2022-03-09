@@ -5,9 +5,9 @@
   </div>
   <div class="columns">
     <div class="column is-three-quarters">
-      <TopicList>
+      <PostList>
 
-      </TopicList>
+      </PostList>
     </div>
     <div class="column">
       <CardBar></CardBar>
@@ -18,11 +18,11 @@
 
 <script>
 import CardBar from "@/views/card/CardBar"
-import TopicList from '@/views/post/Index'
+import PostList from '@/views/post/Index'
 import {getBillboard} from "@/api/billboard"
 export default {
   name: 'HomeView',
-  components: {CardBar, TopicList},
+  components: {CardBar, PostList},
   data(){
     return{
       billboard: {

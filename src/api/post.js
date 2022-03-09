@@ -3,11 +3,11 @@ import request from '@/utils/request'
 // 列表
 export function getList(pageNo, size, tab) {
   return request(({
-    url: `/post/${pageNo}/${size}/${tab}`,
+    url: '/post/list',
     method: 'get',
+    params: { pageNo: pageNo, size: size, tab: tab }
   }))
 }
-
 // 发布
 export function post(post) {
   return request({
