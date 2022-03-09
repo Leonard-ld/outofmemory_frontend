@@ -42,7 +42,7 @@ export function update(post) {
 
 export function deletePost(id) {
   return request({
-    url: `/post/${id}`,
+    url: `/post/delete/${id}`,
     method: 'delete'
   })
 }

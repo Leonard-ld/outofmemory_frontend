@@ -123,9 +123,7 @@ export default {
               });
 
         if (code === 200) {
-          setTimeout(() => {
-            this.$router.push({ path: '/' })
-          }, 500)
+          this.$router.go(0)
         }
       })
     }
