@@ -38,12 +38,21 @@ const routes = [
     meta: { title: '信息发布', requireAuth: true }
   },
     // 详情
-    {
-      name: "post-detail",
-      path: "/post/:id",
-      component: () => import("@/views/post/Detail"),
-      meta: { title: "详情" },
-    },
+  {
+    name: "post-detail",
+    path: "/post/:id",
+    component: () => import("@/views/post/Detail"),
+    meta: { title: "详情" },
+  },
+    // 编辑
+  {
+    name: 'post-edit',
+    path: '/post/edit/:id',
+    component: () => import('@/views/post/Edit'),
+    meta: {
+      title: '编辑'
+    }
+  },
   //404
   {
     path: "/404",

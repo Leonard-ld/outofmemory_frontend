@@ -2,18 +2,18 @@
   <footer class="footer has-text-grey-light has-background-grey-darker">
     <div class="container">
       <div class="">
-        <span>简洁、实用、美观</span>
+        <span>java.lang.OutOfMemoryError</span>
 
-        <span style="float: right">
+        <!-- <span style="float: right">
           <router-link :to="{path:'/admin/login'}">
             管理员登录
           </router-link>
           |
           <a href="/?lang=zh_CN">中文</a> |
           <a href="/?lang=en_US">English</a>
-        </span>
+        </span> -->
       </div>
-
+      <br/>
       <div>
         <span>{{ title }} ALL RIGHTS RESERVED</span>
         <div style="float: right">
@@ -40,8 +40,8 @@ export default {
   },
   data() {
     return {
-      title: "© " + new Date().getFullYear() + ' 豆约翰',
-      author: '豆约翰',
+      title: "© " + new Date().getFullYear() + ' ',
+      author: 'Vue.js',
     };
   },
 };

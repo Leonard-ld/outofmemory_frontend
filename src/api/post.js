@@ -18,7 +18,7 @@ export function post(post) {
 }
 
 // 浏览
-export function getPosts(id) {
+export function getPost(id) {
   return request({
     url: `/post/${id}`,
     method: 'get',
@@ -27,25 +27,22 @@ export function getPosts(id) {
 // 获取详情页推荐
 export function getRecommendPosts(id) {
   return request({
-    url: '/post/recommend',
+    url: `/post/recommend/${id}`,
     method: 'get',
-    params: {
-      postId: id
-    }
   })
 }
 
 export function update(post) {
   return request({
-    url: '/post/update',
-    method: 'post',
+    url: '/post',
+    method: 'put',
     data: post
   })
 }
 
 export function deletePost(id) {
   return request({
-    url: `/post/delete/${id}`,
+    url: `/post/${id}`,
     method: 'delete'
   })
 }

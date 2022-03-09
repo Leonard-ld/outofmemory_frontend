@@ -82,7 +82,7 @@
 </template>
 
 <script>
-import { deletePost, getPosts } from '@/api/post'
+import { deletePost, getPost } from '@/api/post'
 import { mapGetters } from 'vuex'
 import Vditor from 'vditor'
 import 'vditor/dist/index.css'
@@ -119,7 +119,7 @@ export default {
     },
     // 初始化
     async fetchPosts() {
-      getPosts(this.$route.params.id).then(response => {
+      getPost(this.$route.params.id).then(response => {
         const { data } = response
         document.title = data.post.title
         this.post = data.post
@@ -133,7 +133,11 @@ export default {
     handleDelete(id) {
       deletePost(id).then(value => {
         const { code, message } = value
-        alert(message)
+        this.$message({
+                message: message,
+                type: "success",
+                duration: 2000,
+              });
         if (code === 200) {
           setTimeout(() => {
             this.$router.push({ path: '/' })
