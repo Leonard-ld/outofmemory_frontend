@@ -119,8 +119,8 @@ export default {
   name: 'Header',
   data() {
     return {
-      logoUrl: require('@/assets/logo.png'),
-      LogoImg: require('@/assets/Avatar'),
+      logoUrl: require('@/assets/url.png'),
+      LogoImg: require('@/assets/hot.png'),
       searchKey: '',
       darkMode: false
     }
