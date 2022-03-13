@@ -4,7 +4,7 @@
       <div class="column is-one-quarter">
         <el-card shadow="never">
           <div slot="header" class="has-text-centered">
-            <el-avatar :size="64" :src="`https://cn.gravatar.com/avatar/${postUser.id}?s=164&d=monsterid`" />
+            <el-avatar :size="64" :src="`https://cravatar.cn/avatar/${postUser.id}31b6f0addc72b039b94122a4.png?s=200&d=robohash&f=y`" />
             <p class="mt-3">{{ postUser.alias || postUser.username }}</p>
           </div>
           <div>

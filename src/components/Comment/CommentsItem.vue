@@ -1,7 +1,7 @@
 <template>
   <article class="media">
     <figure class="media-left image is-48x48">
-      <img :src="`https://cn.gravatar.com/avatar/${comment.userId}?s=164&d=monsterid`">
+      <img :src="`https://cravatar.cn/avatar/${comment.userId}31b6f0addc72b039b94122a4.png?s=200&d=robohash&f=y`">
     </figure>
     <div class="media-content">
       <div class="content">

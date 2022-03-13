@@ -7,7 +7,7 @@
             <article v-for="(item, index) in articleList" :key="index" class="media">
               <div class="media-left">
                 <figure class="image is-48x48">
-                  <img :src="`https://cravatar.cn/avatar/245467ef31b6f0addc72b039b94122a4.png?s=200&d=robohash&f=y`" style="border-radius: 5px;">
+                  <img :src="`https://cravatar.cn/avatar/${item.username}31b6f0addc72b039b94122a4.png?s=200&d=robohash&f=y`" style="border-radius: 5px;">
                 </figure>
               </div>
               <div class="media-content">
@@ -53,7 +53,7 @@
             <article v-for="(item, index) in articleList" :key="index" class="media">
               <div class="media-left">
                 <figure class="image is-48x48">
-                  <img :src="`https://cravatar.cn/avatar/245467ef31b6f0addc72b039b94122a4.png?s=200&d=robohash&f=y`" style="border-radius: 5px;">
+                  <img :src="`https://cravatar.cn/avatar/${item.username}1b6f0addc72b039b94122a4.png?s=200&d=robohash&f=y`" style="border-radius: 5px;">
                 </figure>
               </div>
               <div class="media-content">
