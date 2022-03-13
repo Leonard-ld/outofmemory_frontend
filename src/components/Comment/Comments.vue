@@ -49,7 +49,8 @@ export default {
         const { data } = response
         this.comments = data
       })
-    }
+    },
+
   }
 }
 </script>
