@@ -75,8 +75,8 @@ export default {
           { required: true, message: '请输入话题名称', trigger: 'blur' },
           {
             min: 1,
-            max: 25,
-            message: '长度在 1 到 25 个字符',
+            max: 100,
+            message: '长度在 1 到 100 个字符',
             trigger: 'blur'
           }
         ]
