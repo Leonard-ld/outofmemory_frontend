@@ -43,7 +43,7 @@
                     </router-link>
                   </span>
 
-                  <span class="is-hidden-mobile">浏览:{{ item.view }}</span>
+                  <!-- <span class="is-hidden-mobile">浏览:{{ item.view }}</span> -->
                 </div>
               </div>
             </nav>
