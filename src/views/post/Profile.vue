@@ -78,7 +78,7 @@
 
 <script>
 import { getInfoByName } from '@/api/user'
-import pagination from '@/components/Pagination/index'
+import pagination from '@/components/Pagination'
 import { mapGetters } from 'vuex'
 import { deleteTopic } from '@/api/post'
 
